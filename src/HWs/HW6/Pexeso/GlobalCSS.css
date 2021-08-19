@@ -1,0 +1,12 @@
+/*keeping these 3 css classes here because of iconify library*/
+.iconify {
+  width: 60px;
+  height: 60px;
+  display: none;
+}
+.active:disabled {
+  background: #c4f7ff;
+}
+.active:disabled .iconify {
+  display: inline;
+}
