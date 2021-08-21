@@ -22,6 +22,9 @@ const Header = () => {
             <Link to='/'>Home</Link>
           </Li>
           <Li>
+            <Link to='/todo'>Todo</Link>
+          </Li>
+          <Li>
             <Link to='/third'>PrevState Counter</Link>
           </Li>
           <Li>
