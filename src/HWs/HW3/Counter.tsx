@@ -1,6 +1,5 @@
-import React, { Component } from 'react'
-import theme from './CounterTheme'
-const { primary, white } = theme
+import { Component } from 'react'
+import styled from 'styled-components'
 
 export default class Counter extends Component<{}, { count: number }> {
   constructor(props) {
@@ -8,17 +7,6 @@ export default class Counter extends Component<{}, { count: number }> {
     this.state = {
       count: 0,
     }
-  }
-
-  styles = {
-    button: {
-      backgroundColor: primary,
-      margin: '5px',
-      border: 'none',
-      padding: '5px 10px',
-      color: white,
-    },
-    h1: { color: primary, fontSize: '50px' },
   }
 
   increment = () => {
@@ -33,22 +21,49 @@ export default class Counter extends Component<{}, { count: number }> {
   }
   render() {
     return (
-      <div style={{ textTransform: 'uppercase', textAlign: 'center' }}>
-        <h1 style={{ textTransform: 'uppercase', textAlign: 'center' }}>14.7. Čtvrté setkání</h1>
-        <h1 style={this.styles.h1}>{this.state.count}</h1>
-        <button style={this.styles.button} onClick={this.decrement}>
-          Decrement
-        </button>
-        <button style={this.styles.button} onClick={this.increment}>
-          Increment
-        </button>
-        <button
-          style={{ ...this.styles.button, display: 'block', margin: '0 auto' }}
-          onClick={() => this.setState({ count: 0 })}
-        >
-          Reset
-        </button>
+      <div>
+        <H1>PrevState Counter App</H1>
+        <Count>{this.state.count}</Count>
+        <CounterWrapper>
+          <Button onClick={this.decrement}>Decrement</Button>
+          <Button onClick={this.increment}>Increment</Button>
+          <Button onClick={() => this.setState({ count: 0 })}>Reset</Button>
+        </CounterWrapper>
       </div>
     )
   }
 }
+
+export const CounterWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+`
+export const Button = styled.button`
+  border: none;
+  padding: 0.3rem 0.5rem;
+  margin: 0.5rem 1rem;
+  transition: all 300ms ease-in-out;
+  border-radius: 5px;
+  width: 100px;
+  &:hover {
+    transform: scale(1.3);
+  }
+`
+export const H1 = styled.h1`
+  text-align: center;
+  font-weight: bolder;
+  font-size: 40px;
+`
+export const Count = styled.div`
+  text-align: center;
+  font-size: 40px;
+  background-color: #000000;
+  border-radius: 5px;
+
+  color: white;
+  width: 50px;
+  vertical-align: top;
+  margin: 0 auto;
+`

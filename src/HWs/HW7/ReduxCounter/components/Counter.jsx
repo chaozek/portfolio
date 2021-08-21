@@ -53,7 +53,7 @@ function countReducer(state = initialState, action) {
     case 'POW':
       return { ...state, value: Math.floor(Math.pow(state.value, state.value)) }
     case 'RESET':
-      return { ...state, value: (state.value = 0) }
+      return { value: (state.value = 0) }
     case 'DIV':
       if (state.value <= 0) {
         return {

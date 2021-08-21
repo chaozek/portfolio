@@ -1,19 +1,23 @@
 import { Delete, Edit, Input, Left, Right, SingleTodoWrapper } from './Todo'
 import React from 'react'
+import styled from 'styled-components'
 
-interface Props {
+export type Props = {
   checked: boolean
   id: number | null
   check: (id: number | null) => void
   editing: boolean
-  handleEdit: (e: any, id: number | null) => void
+  handleEdit: (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    id: number | null
+  ) => void
   text: string
-  handleChange: (any) => void
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   changeEdit: (id: number | null, text: string) => void
-  handleDelete: (any) => void
+  handleDelete: (number) => void
 }
 const SingleTodo = (props: Props) => {
-  const style = { textDecoration: 'line-through' }
+  console.log(props.checked)
   return (
     <SingleTodoWrapper>
       <Left
@@ -36,7 +40,14 @@ const SingleTodo = (props: Props) => {
             />
           </form>
         ) : (
-          <p>{props.text}</p>
+          <p
+            style={{
+              textDecoration: props.checked ? 'line-through' : 'none',
+              margin: '0',
+            }}
+          >
+            {props.text}
+          </p>
         )}
       </Left>
       <Right>
@@ -46,7 +57,7 @@ const SingleTodo = (props: Props) => {
               props.handleEdit(e, props.id)
             }}
           >
-            SAVE
+            Save
           </Edit>
         ) : (
           <Edit

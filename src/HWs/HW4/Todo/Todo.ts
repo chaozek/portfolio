@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-
 export const TodoWrapper = styled.div`
   display: flex;
   justify-content: center;
@@ -8,10 +7,10 @@ export const TodoWrapper = styled.div`
 
 export const TodoBlock = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  width: 50%;
+  width: 80%;
 `
 export const SingleTodoWrapper = styled.div`
-  padding: 0rem 1rem;
+  padding: 0rem 0.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,13 +18,13 @@ export const SingleTodoWrapper = styled.div`
   min-height: 4rem;
 `
 export const Right = styled.div`
-  box-shadow: rgba(0, 0, 0, 0.05) 0px 0px 0px 1px;
   margin-left: 1rem;
   text-align: center;
   width: 150px;
 `
 export const Left = styled.div`
   width: 100%;
+  cursor: pointer;
 `
 export const Delete = styled.button`
   margin: 0.3rem;
@@ -33,7 +32,7 @@ export const Delete = styled.button`
   background-color: white;
   color: red;
   border: 1px solid red;
-
+  width: 40px;
   border-radius: 3px;
 
   :hover {
@@ -48,6 +47,7 @@ export const Edit = styled.button`
   color: white;
   margin: 0.3rem;
   border-radius: 3px;
+  width: 40px;
 
   background-color: white;
   color: gray;

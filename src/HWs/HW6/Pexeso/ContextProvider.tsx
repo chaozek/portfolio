@@ -1,4 +1,4 @@
-import React, { FC, FunctionComponent, createContext, useState } from 'react'
+import React, { createContext, useState } from 'react'
 const CARD_COUNT = 16
 type CardsContextState = {
   cards: boolean[]
@@ -85,7 +85,7 @@ const CardsProvider = ({ children }: CardProps) => {
   )
 }
 export const theme = {
-  background: '#0348a9',
+  background: '#AACCFF',
   shadow: 'rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;',
 }
 export default CardsProvider

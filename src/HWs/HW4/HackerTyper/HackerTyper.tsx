@@ -16,6 +16,7 @@ class HackerTyper extends Component<IProps, IState> {
       cursor: 1,
     }
   }
+  elem = document.createElement('div')
 
   handleKey = () => {
     this.setState({
@@ -31,7 +32,10 @@ class HackerTyper extends Component<IProps, IState> {
     document.body.style.backgroundColor = 'black'
     this.setState({ data: '' })
   }
-
+  componentWillUnmount() {
+    console.log('UNMOUNTED')
+    document.body.style.backgroundColor = '#FBFBFB'
+  }
   componentDidUpdate() {
     this.scrollToBottom()
     if (this.state.cut >= code.length) {
@@ -44,24 +48,15 @@ class HackerTyper extends Component<IProps, IState> {
     }, 1000)
   }
   scrollToBottom() {
-    //@ts-ignore
-    this.el.scrollIntoView({ behavior: 'smooth' })
+    this.elem.scrollIntoView({ behavior: 'smooth' })
   }
   render() {
     return (
-      <Div
-        className='main'
-        style={{ whiteSpace: 'pre-wrap' }}
-        //@ts-ignore
-
-        onClick={this.handleClick}
-        onKeyPress={e => this.handleKey()}
-      >
+      <Div className='main' style={{ whiteSpace: 'pre-wrap' }} onKeyPress={e => this.handleKey()}>
         {this.state.data} <AnimatedSpan>|</AnimatedSpan>
         <div
-          ref={el => {
-            //@ts-ignore
-            this.el = el
+          ref={(elem: HTMLDivElement) => {
+            this.elem = elem
           }}
         />
       </Div>

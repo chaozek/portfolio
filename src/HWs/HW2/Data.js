@@ -17,6 +17,6 @@ export const BoxesData = [
   {
     id: 4,
     img: 'https://image.flaticon.com/icons/png/512/4937/4937656.png',
-    name: 'Never gonna be taken from you',
+    name: '4ever w you',
   },
 ]

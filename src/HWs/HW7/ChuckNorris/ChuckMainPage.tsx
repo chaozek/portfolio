@@ -3,7 +3,6 @@ import { RandomJoke } from './RandomJoke'
 import { findAndRemoveDuplicite } from './arrayUtils'
 import { getAllCategories, getRandomJokeUrl } from './getUrls'
 import { useEffect, useState } from 'react'
-import StyledComponent from 'styled-components'
 import loadingGIF from './loading-buffering.gif'
 import styled from 'styled-components'
 //generating only 2 jokes instead of 20 cause of possible fetch limit/ban, works fine with 20+
@@ -24,9 +23,7 @@ export const Chuck = () => {
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState('')
 
-  const urls = Array.from({ length: JOKE_COUNT }, () => {
-    getRandomJokeUrl()
-  })
+  const urls = new Array(JOKE_COUNT).fill(getRandomJokeUrl())
   useEffect(() => {
     const fetchAll = async (urls: string[] | void[]) => {
       try {

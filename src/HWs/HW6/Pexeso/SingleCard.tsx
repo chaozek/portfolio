@@ -34,4 +34,7 @@ const Button = styled.button`
   border-radius: 5px;
   box-shadow: ${theme.shadow};
   border: none;
+  padding-left: 9px;
+  text-align: center;
+  display: block important;
 `

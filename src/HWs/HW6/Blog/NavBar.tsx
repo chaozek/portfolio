@@ -1,6 +1,8 @@
 import { Collapse, Nav, NavItem, NavLink, Navbar, NavbarBrand, NavbarToggler } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import { useState } from 'react'
+import styled from 'styled-components'
+
 function NavBar() {
   const [isOpen, setIsOpen] = useState(false)
 
@@ -9,10 +11,10 @@ function NavBar() {
   }
   return (
     <div>
-      <Navbar color='light' light expand='md' className='mb-5 p-3'>
+      <Navbar color='dark' dark expand='md' className='mb-5 p-3'>
         <NavbarBrand>
           <Link to='/blog'>
-            <p>{`❤️Blogísek❤️`}</p>
+            <P>Blog</P>
           </Link>
         </NavbarBrand>
         <NavbarToggler onClick={toggle} />
@@ -36,3 +38,7 @@ function NavBar() {
 }
 
 export default NavBar
+const P = styled.p`
+  color: #aaccff;
+  margin: 0;
+`

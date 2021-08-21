@@ -1,10 +1,13 @@
 import SingleTodo from './SingleTodo'
 interface Props {
   check: (id: number | null) => void
-  handleEdit: (e: any, id: number | null) => void
-  handleChange: (any) => void
+  handleEdit: (
+    e: React.FormEvent<HTMLFormElement> | React.MouseEvent<HTMLButtonElement, MouseEvent>,
+    id: number | null
+  ) => void
+  handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
   changeEdit: (id: number | null, text: string) => void
-  handleDelete: (any) => void
+  handleDelete: (number) => void
   items: any
 }
 
