@@ -87,6 +87,7 @@ export const Loading = styled.img`
   display: block;
   margin-left: auto;
   margin-right: auto;
+  width: 50px;
 `
 
 export const H1 = styled.h1`
@@ -99,6 +100,9 @@ const Li = styled.li`
   list-style: none;
   margin: 1rem 2rem;
   width: 55px;
+  a:hover {
+    color: #222233;
+  }
 `
 const Ul = styled.ul`
   display: flex;

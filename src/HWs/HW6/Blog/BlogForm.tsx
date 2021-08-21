@@ -5,6 +5,7 @@ import NavBar from './NavBar'
 
 function BlogForm() {
   const { handleSubmit, handleChange, newArticle } = useContext(BlogContext)
+
   return (
     <div>
       <Form onSubmit={handleSubmit}>
@@ -72,7 +73,7 @@ function BlogForm() {
         </FormGroup>
         <FormGroup check row>
           <Col sm={{ size: 10, offset: 2 }}>
-            <Button>Odeslat</Button>
+            <Button className='mt-3'>Odeslat</Button>
           </Col>
         </FormGroup>
       </Form>

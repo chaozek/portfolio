@@ -74,5 +74,6 @@ const SquareButton = styled.button`
   color: #000000;
   font-weight: bold;
   cursor: pointer;
+  border: none;
 `
 export default Boxes

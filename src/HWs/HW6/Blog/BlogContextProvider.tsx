@@ -1,4 +1,5 @@
 import { FunctionComponent, createContext, useEffect, useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import { v4 as uuidv4 } from 'uuid'
 import useLocalStorage from './useLocalStorage'
 
@@ -80,8 +81,12 @@ const BlogProvider: FunctionComponent<BlogProps> = ({ children }) => {
   const [articles, setArticles] = useLocalStorage('articles', contextDefaultValues.starterArticles)
   const [newArticle, setNewArticle] = useState(contextDefaultValues.newArticle)
   const [articleMemory, setArticleMemory] = useLocalStorage('articles', articles)
+  let history = useHistory()
+
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
+    history.push('/blog')
+
     setArticles(p => [...p, newArticle])
     setNewArticle({
       id: 0,

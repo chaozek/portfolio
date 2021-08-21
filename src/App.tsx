@@ -27,11 +27,10 @@ function App() {
     <>
       <Section>
         <GlobalStyles />
-
-        <CardsProvider>
-          <BlogProvider>
-            <ContextProvider>
-              <Router>
+        <Router>
+          <CardsProvider>
+            <BlogProvider>
+              <ContextProvider>
                 <Header />
                 <Spacer>
                   <Switch>
@@ -80,10 +79,10 @@ function App() {
                     </Provider>
                   </Switch>
                 </Spacer>
-              </Router>
-            </ContextProvider>
-          </BlogProvider>
-        </CardsProvider>
+              </ContextProvider>
+            </BlogProvider>
+          </CardsProvider>
+        </Router>
       </Section>
     </>
   )
@@ -97,7 +96,7 @@ export const Section = styled.div`
   max-width: 1170px;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 5px;
-  min-height: 500px;
+  min-height: 700px;
 `
 export const Spacer = styled.div`
   padding: 2rem 1rem;
@@ -112,5 +111,7 @@ const GlobalStyles = createGlobalStyle`
     text-decoration: none;
     color: #AACCFF
   }
-    
+ a:hover{
+   color: white;
+ }
 `

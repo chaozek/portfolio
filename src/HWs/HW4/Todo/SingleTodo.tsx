@@ -1,6 +1,5 @@
 import { Delete, Edit, Input, Left, Right, SingleTodoWrapper } from './Todo'
 import React from 'react'
-import styled from 'styled-components'
 
 export type Props = {
   checked: boolean

@@ -23,7 +23,7 @@ function CardArticle(props: Props) {
           <hr />
           <div
             dangerouslySetInnerHTML={{
-              __html: trimmedString + '...',
+              __html: trimmedString,
             }}
           ></div>
 

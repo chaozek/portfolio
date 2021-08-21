@@ -8,7 +8,7 @@ import { findAndRemoveDuplicite } from './arrayUtils'
 import { getRandomJokeByCategory } from './getUrls'
 import { useEffect, useState } from 'react'
 import loadingGIF from './loading-buffering.gif'
-
+import styled from 'styled-components'
 const JOKE_COUNT = 2
 export const SingleJoke = () => {
   const slug = useParams()
@@ -48,7 +48,15 @@ export const SingleJoke = () => {
         ))
       )}
 
-      <Link to='/chuck'>Back To HomePage</Link>
+      <Link to='/chuck'>
+        <P>Back To HomePage</P>
+      </Link>
     </div>
   )
 }
+const P = styled.p`
+  margin-top: 2rem;
+  :hover {
+    color: #222233;
+  }
+`
