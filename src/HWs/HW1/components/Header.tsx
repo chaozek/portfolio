@@ -3,12 +3,18 @@ import { Section } from '../../../App'
 import Blog from '../../HW6/Blog/HomePage'
 import BlogForm from '../../HW6/Blog/BlogForm'
 import React from 'react'
+import monkey from '../../../Imgs/Monkey.png'
 import styled from 'styled-components'
+
 const Header = () => {
   return (
     <HeaderDiv>
       <Left>
-        <Link to='/'>Pavel Kaplan</Link>
+        <Link to='/'>
+          {' '}
+          <Img src={monkey} alt='monkey' />
+          Pavel Kaplan
+        </Link>
       </Left>
       <Right>
         <Ul>
@@ -75,4 +81,7 @@ const Ul = styled.div`
 const Li = styled.div`
   margin-right: 1rem;
   text-decoration: none;
+`
+const Img = styled.img`
+  margin-right: 0.5rem;
 `
