@@ -33,7 +33,6 @@ class HackerTyper extends Component<IProps, IState> {
     this.setState({ data: '' })
   }
   componentWillUnmount() {
-    console.log('UNMOUNTED')
     document.body.style.backgroundColor = '#FBFBFB'
   }
   componentDidUpdate() {

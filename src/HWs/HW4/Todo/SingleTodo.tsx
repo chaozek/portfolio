@@ -17,7 +17,6 @@ export type Props = {
   handleDelete: (number) => void
 }
 const SingleTodo = (props: Props) => {
-  console.log(props.checked)
   return (
     <SingleTodoWrapper>
       <Left
