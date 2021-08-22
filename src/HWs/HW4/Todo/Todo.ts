@@ -16,14 +16,15 @@ export const SingleTodoWrapper = styled.div`
   align-items: center;
   border-bottom: 1px solid lightgray;
   min-height: 4rem;
+  flex-wrap: wrap;
 `
 export const Right = styled.div`
-  margin-left: 1rem;
+  flex: 20%;
   text-align: center;
-  width: 150px;
 `
 export const Left = styled.div`
-  width: 100%;
+  flex: 80%;
+
   cursor: pointer;
 `
 export const Delete = styled.button`
@@ -32,7 +33,7 @@ export const Delete = styled.button`
   background-color: white;
   color: red;
   border: 1px solid red;
-  width: 40px;
+  width: 45px;
   border-radius: 3px;
 
   :hover {
@@ -47,7 +48,7 @@ export const Edit = styled.button`
   color: white;
   margin: 0.3rem;
   border-radius: 3px;
-  width: 40px;
+  width: 45px;
 
   background-color: white;
   color: gray;

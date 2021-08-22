@@ -55,6 +55,7 @@ const Square = styled.div`
   box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
   position: relative;
   margin: 1rem;
+  text-align: center;
 `
 const Squares = styled.div`
   display: flex;
@@ -63,17 +64,19 @@ const Squares = styled.div`
   flex-wrap: wrap;
 `
 const Img = styled.img`
-  width: 80px;
+  width: 60px;
 `
 const SquareButton = styled.button`
   position: absolute;
   left: 0;
   top: 0;
-  background-color: white;
   padding: 0.5rem;
+  width: 30px;
+  height: 30px;
   color: #000000;
   font-weight: bold;
   cursor: pointer;
   border: none;
+  font-size: 0.5rem;
 `
 export default Boxes

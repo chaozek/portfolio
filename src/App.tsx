@@ -26,7 +26,6 @@ function App() {
   return (
     <>
       <Section>
-        <GlobalStyles />
         <Router>
           <CardsProvider>
             <BlogProvider>
@@ -83,6 +82,7 @@ function App() {
             </BlogProvider>
           </CardsProvider>
         </Router>
+        <GlobalStyles />
       </Section>
     </>
   )
@@ -93,7 +93,7 @@ export default App
 export const Section = styled.div`
   width: 90vw;
   margin: 0 auto;
-  max-width: 1170px;
+  max-width: 100%;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 5px;
   min-height: 700px;
@@ -102,15 +102,20 @@ export const Spacer = styled.div`
   padding: 2rem 1rem;
 `
 const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600&display=swap');
+
+*{
+  font-family: 'Roboto', sans-serif;
+}
+
+}
   body {
-    font-family: 'Oswald', sans-serif;
     background-color: #FBFBFB;
-  }
   a{
+
     text-decoration: none;
-    color: #AACCFF
-  }
+    color: #AACCFF;
+    font-weight: bold;
+    }
  a:hover{
    color: white;
  }
