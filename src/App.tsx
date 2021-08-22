@@ -17,6 +17,7 @@ import GameContainer from './HWs/HW5/GameContainer'
 import HackerTyper from './HWs/HW4/HackerTyper/HackerTyper'
 import Header from './HWs/HW1/components/Header'
 import HtmlToReact from './HWs/HW2/HtmlToReact'
+import NotFound from './HWs/HW1/NotFound'
 import SinglePost from './HWs/HW6/Blog/SinglePost'
 import StarterPage from './HWs/HW1/StarterPage'
 import Todo from './HWs/HW4/Todo/TodoApp'
@@ -32,51 +33,54 @@ function App() {
               <ContextProvider>
                 <Header />
                 <Spacer>
-                  <Switch>
-                    <Route exact path='/second'>
-                      <HtmlToReact />
-                    </Route>
-                    <Route path='/third'>
-                      <Counter />
-                    </Route>
-                    <Route path='/hackertyper'>
-                      <HackerTyper />
-                    </Route>
-                    <Route path='/todo'>
-                      <Todo />
-                    </Route>
-                    <Route path='/tic-tac-toe'>
-                      <GameContainer />
-                    </Route>
-                    <Route path='/blog'>
-                      <Blog />
-                    </Route>
-                    <Route path='/new-article'>
-                      <BlogForm />
-                    </Route>
-                    <Route
-                      path='/article/:articleSlug'
-                      render={props => <SinglePost {...props} />}
-                    />
-                    <Route path='/add-post'>
-                      <BlogForm />
-                    </Route>
-                    <Route path='/pexeso'>
-                      <CardStack />
-                    </Route>
-                    <Route path='/chuck'>
-                      <Chuck />
-                    </Route>
-                    <Route exact path='/'>
-                      <StarterPage />
-                    </Route>
-                    <Route path='/jokes/:category' render={props => <SingleJoke {...props} />} />
-                    <Provider store={store}>
-                      <Route path='/redux'>
+                  <Provider store={store}>
+                    <Switch>
+                      <Route exact path='/second'>
+                        <HtmlToReact />
+                      </Route>
+                      <Route path='/third'>
+                        <Counter />
+                      </Route>
+                      <Route path='/hackertyper'>
+                        <HackerTyper />
+                      </Route>
+                      <Route path='/todo'>
+                        <Todo />
+                      </Route>
+                      <Route path='/tic-tac-toe'>
+                        <GameContainer />
+                      </Route>
+                      <Route path='/blog'>
+                        <Blog />
+                      </Route>
+                      <Route path='/new-article'>
+                        <BlogForm />
+                      </Route>
+                      <Route
+                        path='/article/:articleSlug'
+                        render={props => <SinglePost {...props} />}
+                      />
+                      <Route path='/add-post'>
+                        <BlogForm />
+                      </Route>
+                      <Route path='/pexeso'>
+                        <CardStack />
+                      </Route>
+                      <Route path='/chuck'>
+                        <Chuck />
+                      </Route>
+                      <Route exact path='/'>
+                        <StarterPage />
+                      </Route>
+                      <Route path='/jokes/:category' render={props => <SingleJoke {...props} />} />
+                      <Route exact path='/redux'>
                         <Redux />
                       </Route>
-                    </Provider>
-                  </Switch>
+                      <Route path='*'>
+                        <NotFound />
+                      </Route>
+                    </Switch>
+                  </Provider>
                 </Spacer>
               </ContextProvider>
             </BlogProvider>
