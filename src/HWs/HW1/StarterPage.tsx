@@ -29,6 +29,16 @@ const HomePage = () => {
           )
         })}
       </Container>
+      <TextBlock>
+        <p>Source code for this website </p>
+        <a href='https://github.com/chaozek/portfolio' target='_blank' rel='noreferrer'>
+          <img
+            src='https://www.spajk.cz/wp-content/uploads/2021/05/github-3215409-2673827.png'
+            alt='github'
+            style={{ width: '50px' }}
+          />
+        </a>
+      </TextBlock>
     </>
   )
 }
@@ -41,6 +51,7 @@ const Container = styled.div`
   column-gap: 10px;
   row-gap: 10px;
   grid-auto-rows: 150px;
+  margin: 2rem 0rem;
 `
 const P = styled.p`
   position: absolute;
@@ -53,7 +64,6 @@ const TextBlock = styled.div`
   width: 50%;
   text-align: center;
   margin: 0 auto;
-  margin-bottom: 2rem;
   @media (max-width: 768px) {
     width: 80%;
   }

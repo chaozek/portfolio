@@ -23,7 +23,7 @@ const Header = props => {
 
   return (
     <div>
-      <Navbar color='dark' dark expand='md' className='p-3'>
+      <Navbar color='dark' dark expand='lg' className='p-3'>
         <Link to='/'>
           <NavbarBrand>
             <Img src={monkey} alt='monkey' />

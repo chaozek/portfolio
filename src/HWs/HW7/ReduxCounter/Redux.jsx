@@ -28,13 +28,13 @@ export const Redux = () => {
 
       <Count>{error ? <p> {error} </p> : value}</Count>
       <CounterWrapper>
-        <Button onClick={() => dispatch(increment1())}>ADD_1</Button>
-        <Button onClick={() => dispatch(increment2())}>ADD_2</Button>
-        <Button onClick={() => dispatch(pow_2())}>POW_2</Button>
-        <Button onClick={() => dispatch(pow())}>POW_POW</Button>
-        <Button onClick={() => dispatch(dec())}>DEC_1</Button>
-        <Button onClick={() => dispatch(dec_2())}>DEC_2</Button>
-        <Button onClick={() => dispatch(div())}>DIV</Button>
+        <Button onClick={() => dispatch(increment1())}>ADD 1</Button>
+        <Button onClick={() => dispatch(increment2())}>ADD 2</Button>
+        <Button onClick={() => dispatch(pow_2())}>POW 2</Button>
+        <Button onClick={() => dispatch(pow())}>POW</Button>
+        <Button onClick={() => dispatch(dec())}>DECREMENT 1</Button>
+        <Button onClick={() => dispatch(dec_2())}>DECREMENT 2</Button>
+        <Button onClick={() => dispatch(div())}>DIVIDE</Button>
         <Button onClick={() => dispatch(sqrt())}>SQRT</Button>
         <Button onClick={() => dispatch(reset())}>RESET</Button>
       </CounterWrapper>

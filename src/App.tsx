@@ -16,7 +16,7 @@ import Counter from './HWs/HW3/Counter'
 import GameContainer from './HWs/HW5/GameContainer'
 import HackerTyper from './HWs/HW4/HackerTyper/HackerTyper'
 import Header from './HWs/HW1/components/Header'
-import HtmlToReact from './HWs/HW2/HtmlToReact.jsx'
+import HtmlToReact from './HWs/HW2/HtmlToReact'
 import SinglePost from './HWs/HW6/Blog/SinglePost'
 import StarterPage from './HWs/HW1/StarterPage'
 import Todo from './HWs/HW4/Todo/TodoApp'
@@ -97,6 +97,9 @@ export const Section = styled.div`
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 5px;
   min-height: 700px;
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `
 export const Spacer = styled.div`
   padding: 2rem 1rem;

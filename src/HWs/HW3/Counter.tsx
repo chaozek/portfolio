@@ -46,7 +46,7 @@ export const Button = styled.button`
   margin: 0.5rem 1rem;
   transition: all 300ms ease-in-out;
   border-radius: 5px;
-  width: 100px;
+  width: 130px;
   &:hover {
     transform: scale(1.3);
   }
