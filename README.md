@@ -4,13 +4,15 @@ This is my summary of work done in 10 weeks in ITAbsolvent training. For layout 
 
 ## PrevState Counter
 
-Link [PrevState Counter](https://pavelkaplan.eu/third).  
+Link [PrevState Counter](https://pavelkaplan.eu/third).
+
 Very simple app where I've learn about importance of prevState in react.
 Class based component & Typescript & styled components is used in this project
 
 ## JS History
 
-Link [JS History](https://pavelkaplan.eu/second).  
+Link [JS History](https://pavelkaplan.eu/second).
+
 Historically first homework of ITA. There is not much going on.
 This app was lately upgraded to TS & styled components.
 
