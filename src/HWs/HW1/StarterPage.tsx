@@ -11,7 +11,7 @@ const HomePage = () => {
         <p>
           As a Marketing Manager I had a lot of work with updating information on websites and
           delegation wasn&apos;t efficient so I&apos;ve decided to learn how to do it. Since then
-          Iam diving deeper and deeper to website development and
+          Iam diving deeper and deeper into website development and
           <strong> I&apos;ve found my passion.</strong>
         </p>
         <img src={monkey} alt='monkey' />
