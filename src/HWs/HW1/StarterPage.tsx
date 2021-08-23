@@ -21,7 +21,7 @@ const HomePage = () => {
       <Container>
         {MenuData.map((data, index) => {
           return (
-            <Link key={index} to={data.Link}>
+            <Link key={index} to={data.Link} target={data.ProjectName === 'EC' ? '_blank' : ''}>
               <App image={data.CoverPhoto}>
                 <P>{data.ProjectName}</P>
               </App>

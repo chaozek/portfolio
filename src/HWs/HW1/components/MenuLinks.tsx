@@ -1,3 +1,4 @@
+import EC from '../../../Imgs/ec.png'
 import blog from '../../../Imgs/blog.jpg'
 import count from '../../../Imgs/count.jpg'
 import hacker from '../../../Imgs/hacker.jpg'
@@ -53,5 +54,10 @@ export const MenuData = [
     ProjectName: 'Blog',
     Link: '/blog',
     CoverPhoto: blog,
+  },
+  {
+    ProjectName: 'EC',
+    Link: { pathname: 'https://ec-final.vercel.app/' },
+    CoverPhoto: EC,
   },
 ]
