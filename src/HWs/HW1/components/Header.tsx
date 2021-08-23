@@ -34,26 +34,6 @@ const Header = props => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className='ms-auto ' navbar>
             <NavItem>
-              <Link to='/hackertyper'>
-                <NavLink>Hacker Typer</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to='/blog'>
-                <NavLink>Blog</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to='/pexeso'>
-                <NavLink>Pexeso</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to='/tic-tac-toe'>
-                <NavLink>Tic Tac Toe</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
               <Link to='/third'>
                 <NavLink>Counter</NavLink>
               </Link>
@@ -64,8 +44,18 @@ const Header = props => {
               </Link>
             </NavItem>
             <NavItem>
-              <Link to='/redux'>
-                <NavLink>Redux</NavLink>
+              <Link to='/hackertyper'>
+                <NavLink>Hacker Typer</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/tic-tac-toe'>
+                <NavLink>Tic Tac Toe</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/pexeso'>
+                <NavLink>Pexeso</NavLink>
               </Link>
             </NavItem>
             <NavItem>
@@ -74,8 +64,18 @@ const Header = props => {
               </Link>
             </NavItem>
             <NavItem>
+              <Link to='/redux'>
+                <NavLink>Redux</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
               <Link to='/todo'>
                 <NavLink>To Do</NavLink>
+              </Link>
+            </NavItem>
+            <NavItem>
+              <Link to='/blog'>
+                <NavLink>Blog</NavLink>
               </Link>
             </NavItem>
           </Nav>
