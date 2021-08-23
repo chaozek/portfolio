@@ -1,17 +1,19 @@
-# PrevState Counter
+# Portfolio
 
-# JS History
+## PrevState Counter
 
-# Hacker Typer
+## JS History
 
-# Tic-Tac-Toe
+## Hacker Typer
 
-# Pexeso
+## Tic-Tac-Toe
 
-# Chuck Norris Joke generator
+## Pexeso
 
-# Redux
+## Chuck Norris Joke generator
 
-# To Do
+## Redux
 
-# Blog
+## To Do
+
+## Blog
