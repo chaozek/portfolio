@@ -75,14 +75,6 @@ function blinking() {
 const AnimatedSpan = styled.span`
   animation: ${blinking} 1s linear infinite;
 `
-
-const GlobalStyle = createGlobalStyle`
-  * {
-    @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-
-  }
-`
-
 const Div = styled.div`
   color: lightgreen;
   text-shadow: 0px 0px 3px white;
