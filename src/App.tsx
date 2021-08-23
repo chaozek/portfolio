@@ -7,6 +7,7 @@ import { SingleJoke } from './HWs/HW7/ChuckNorris/SingleJoke'
 import { allReducers } from './HWs/HW7/ReduxCounter/components/Counter.jsx'
 import { createGlobalStyle } from 'styled-components'
 import { createStore } from 'redux'
+import { useState } from 'react'
 import Blog from './HWs/HW6/Blog/HomePage'
 import BlogForm from './HWs/HW6/Blog/BlogForm'
 import BlogProvider from './HWs/HW6/Blog/BlogContextProvider'
@@ -21,6 +22,7 @@ import NotFound from './HWs/HW1/NotFound'
 import SinglePost from './HWs/HW6/Blog/SinglePost'
 import StarterPage from './HWs/HW1/StarterPage'
 import Todo from './HWs/HW4/Todo/TodoApp'
+import op from './Imgs/op.png'
 import styled from 'styled-components'
 const store = createStore(allReducers)
 function App() {
@@ -101,6 +103,9 @@ export const Section = styled.div`
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
   border-radius: 5px;
   min-height: 700px;
+  background-image: url(${op});
+  background-position: 98% 100%;
+  background-repeat: no-repeat;
   @media (max-width: 768px) {
     width: 100%;
   }

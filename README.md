@@ -61,4 +61,4 @@ This App can Update, Delete, Check, Add. I've plan for connecting this app with 
 
 Link [Blog](https://pavelkaplan.eu/blog).
 
-LocalStorage & dynamic routing & custom hook (useLocalStorage) was used in this app. In the future as I'll have a minute I want to make this app CRUD, also connected with backend.
+LocalStorage & dynamic routing & custom hook (useLocalStorage) & external npm library react-markdown was used in this app. In the future as I'll have a minute I want to make this app CRUD, also connected with backend.

@@ -35,7 +35,7 @@ const contextDefaultValues: BlogContextState = {
       text: [
         '### řádek 1',
         'řádek 2',
-        '![title](https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/47T98WdiWvPzKEVDFhPqtUKv/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882)',
+        '<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/See_No_Evil_Monkey_Emoji_grande.png?v=1571606065" width="200" height="200">',
       ].join('\n\n'),
       header: 'Article 1',
       //no func for date - gets new date everytime, its here just for design consistency
@@ -47,7 +47,7 @@ const contextDefaultValues: BlogContextState = {
       text: [
         '### řádek 1',
         'řádek 2',
-        '![title](https://community-cdn-digitalocean-com.global.ssl.fastly.net/variants/47T98WdiWvPzKEVDFhPqtUKv/035575f2985fe451d86e717d73691e533a1a00545d7230900ed786341dc3c882)',
+        '<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/See_No_Evil_Monkey_Emoji_grande.png?v=1571606065" width="200" height="200">',
       ].join('\n\n'),
       header: 'Article 2',
       date: new Date().toLocaleString(),

@@ -1,5 +1,4 @@
 import Boxes from './Boxes'
-import React from 'react'
 import styled from 'styled-components'
 export default function HtmlToReact() {
   return (
@@ -52,13 +51,6 @@ export default function HtmlToReact() {
           </p>
         </Block>
       </BoxWrapper>
-      <a href='https://github.com/chaozek/portfolio' target='_blank' rel='noreferrer'>
-        <img
-          src='https://www.spajk.cz/wp-content/uploads/2021/05/github-3215409-2673827.png'
-          alt='github'
-          style={{ width: '50px' }}
-        />
-      </a>
     </>
   )
 }
@@ -69,6 +61,7 @@ const Block = styled.div`
   position: relative;
   z-index: 1;
   transition: clip 600ms ease-out;
+  background: white;
 `
 const BoxWrapper = styled.div`
   padding: 1rem;
