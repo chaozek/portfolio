@@ -1,4 +1,5 @@
 import { Component } from 'react'
+import { H1 } from '../../HW6/Pexeso/CardStack'
 import { TodoBlock, TodoWrapper } from './Todo'
 import Input from './TodoForm'
 import Todos from './Todos'
@@ -130,25 +131,29 @@ class Todo extends Component<IProps, IState> {
   }
   render() {
     return (
-      <TodoWrapper>
-        <TodoBlock>
-          <Input
-            currentItem={this.state.currentItem.text}
-            handleSubmit={this.handleSubmit}
-            handleChange={this.handleChange}
-            editing={this.state.editing}
-            items={this.state.items}
-          />
-          <Todos
-            handleDelete={this.handleDelete}
-            handleEdit={this.handleEdit}
-            items={this.state.items}
-            changeEdit={this.changeEdit}
-            handleChange={this.handleChange}
-            check={this.check}
-          />
-        </TodoBlock>
-      </TodoWrapper>
+      <>
+        <H1>To Do</H1>
+
+        <TodoWrapper>
+          <TodoBlock>
+            <Input
+              currentItem={this.state.currentItem.text}
+              handleSubmit={this.handleSubmit}
+              handleChange={this.handleChange}
+              editing={this.state.editing}
+              items={this.state.items}
+            />
+            <Todos
+              handleDelete={this.handleDelete}
+              handleEdit={this.handleEdit}
+              items={this.state.items}
+              changeEdit={this.changeEdit}
+              handleChange={this.handleChange}
+              check={this.check}
+            />
+          </TodoBlock>
+        </TodoWrapper>
+      </>
     )
   }
 }

@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { MenuData } from './components/MenuLinks'
+import { itaProjects, privateProjects } from './components/MenuLinks'
 import monkey from '../../Imgs/Monkey.png'
 import styled from 'styled-components'
 
@@ -17,15 +17,29 @@ const HomePage = () => {
         <img src={monkey} alt='monkey' />
         <h2> „better late than never“</h2>
       </TextBlock>
+      <H2>ITA projects</H2>
 
-      <Container>
-        {MenuData.map((data, index) => {
+      <Container grid={150}>
+        {itaProjects.map((data, index) => {
           return (
             <Link key={index} to={data.Link} target={data.ProjectName === 'EC' ? '_blank' : ''}>
               <App image={data.CoverPhoto}>
                 <P>{data.ProjectName}</P>
               </App>
             </Link>
+          )
+        })}
+      </Container>
+      <H2>A few business projects</H2>
+
+      <Container grid={200}>
+        {privateProjects.map((data, index) => {
+          return (
+            <a key={index} target='_blank' rel='noreferrer' href={data.Link}>
+              <App image={data.CoverPhoto}>
+                <P color='white'>{data.ProjectName}</P>
+              </App>
+            </a>
           )
         })}
       </Container>
@@ -44,21 +58,32 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-const Container = styled.div`
+type GridStyle = {
+  grid: number
+}
+type FontStyle = {
+  color?: string
+}
+const Container = styled.div<GridStyle>`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(${props => props.grid}px, 1fr));
   column-gap: 10px;
   row-gap: 10px;
   grid-auto-rows: 150px;
   margin: 2rem 0rem;
 `
-const P = styled.p`
+const P = styled.p<FontStyle>`
   position: absolute;
-  color: #212529;
+  color: ${props => (props.color ? props.color : '#212529')};
   font-family: 'Rampart One', cursive;
   font-size: 1.5rem;
   bottom: 0;
+`
+const H2 = styled.p`
+  text-decoration: underline;
+  text-decoration-color: #148298;
+  margin-top: 4rem;
+  font-size: 2rem;
 `
 const TextBlock = styled.div`
   width: 50%;
@@ -83,6 +108,7 @@ const App = styled.div<Props>`
   background: url(${props => props.image}) center no-repeat;
   display: flex;
   text-align: center;
+  background-size: cover;
   height: 100%;
   align-items: center;
   border-radius: 5px;

@@ -1,6 +1,5 @@
-import { Button, CounterWrapper, H1 } from '../../HW3/Counter'
-import styled from 'styled-components'
-
+import { Button, CounterWrapper } from '../../HW3/Counter'
+import { H1 } from '../../HW6/Pexeso/CardStack'
 import {
   dec,
   dec_2,
@@ -14,6 +13,7 @@ import {
 } from './components/Counter'
 import { useDispatch, useSelector } from 'react-redux'
 import React from 'react'
+import styled from 'styled-components'
 const getCounter = state => state.counter.value
 const getError = state => state.counter.error
 

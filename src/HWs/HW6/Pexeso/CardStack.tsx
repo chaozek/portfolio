@@ -24,7 +24,7 @@ export function CardStack() {
   )
 }
 
-const H1 = styled.h1`
+export const H1 = styled.h1`
   text-align: center;
   font-weight: bolder;
   font-size: 40px;

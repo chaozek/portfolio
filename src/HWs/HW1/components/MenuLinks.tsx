@@ -1,4 +1,7 @@
+import ADP from '../../../Imgs/adp.png'
 import EC from '../../../Imgs/ec.png'
+import INSPIRATA from '../../../Imgs/inspirata.png'
+import RSOH from '../../../Imgs/rsoh.png'
 import blog from '../../../Imgs/blog.jpg'
 import count from '../../../Imgs/count.jpg'
 import hacker from '../../../Imgs/hacker.jpg'
@@ -8,7 +11,7 @@ import pexeso from '../../../Imgs/pexeso.jpg'
 import redux from '../../../Imgs/redux.jpg'
 import tictactoe from '../../../Imgs/tictactoe.jpg'
 import todo from '../../../Imgs/todo.jpg'
-export const MenuData = [
+export const itaProjects = [
   {
     ProjectName: 'PrevState Counter',
     Link: '/third',
@@ -55,9 +58,27 @@ export const MenuData = [
     Link: '/blog',
     CoverPhoto: blog,
   },
+]
+export const privateProjects = [
   {
-    ProjectName: 'EC',
-    Link: { pathname: 'https://ec-final.vercel.app/' },
+    ProjectName: 'essential college (unfinished react project)',
+    Link: 'https://ec-final.vercel.app/',
     CoverPhoto: EC,
+  },
+  {
+    ProjectName: 'Ryba smrdí od hlavy (WP)',
+    Link: 'https://rybasmrdiodhlavy.cz/',
+    CoverPhoto: RSOH,
+  },
+
+  {
+    ProjectName: 'Aplikuj Do Praxe (WP LMS)',
+    Link: 'https://aplikujdopraxe.cz/kurzy/cesta-osobnostniho-rozvoje/',
+    CoverPhoto: ADP,
+  },
+  {
+    ProjectName: 'Inspirata (WP)',
+    Link: 'https://inspirata.cz/',
+    CoverPhoto: INSPIRATA,
   },
 ]

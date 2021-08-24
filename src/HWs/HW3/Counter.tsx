@@ -1,6 +1,6 @@
 import { Component } from 'react'
+import { H1 } from '../HW6/Pexeso/CardStack'
 import styled from 'styled-components'
-
 export default class Counter extends Component<{}, { count: number }> {
   constructor(props) {
     super(props)
@@ -51,11 +51,7 @@ export const Button = styled.button`
     transform: scale(1.3);
   }
 `
-export const H1 = styled.h1`
-  text-align: center;
-  font-weight: bolder;
-  font-size: 40px;
-`
+
 export const Count = styled.div`
   text-align: center;
   font-size: 40px;
