@@ -80,7 +80,6 @@ type BlogProps = {}
 const BlogProvider: FunctionComponent<BlogProps> = ({ children }) => {
   const [articles, setArticles] = useLocalStorage('articles', contextDefaultValues.starterArticles)
   const [newArticle, setNewArticle] = useState(contextDefaultValues.newArticle)
-  const [articleMemory, setArticleMemory] = useLocalStorage('articles', articles)
   let history = useHistory()
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {

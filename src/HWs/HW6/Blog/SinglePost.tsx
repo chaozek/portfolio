@@ -15,9 +15,6 @@ function SinglePost(props: Props) {
   const getData = articles.find(p => p.UrlSlug === getId)
   const markdown = marked(getData?.text)
 
-  useEffect(() => {
-    const localData = localStorage.getItem('articles')
-  }, [])
   return (
     <div className='mb-5'>
       <NavBar />

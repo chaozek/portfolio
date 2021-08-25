@@ -25,7 +25,6 @@ export const Redux = () => {
   return (
     <div>
       <H1>Redux Counter App</H1>
-
       <Count>{error ? <p> {error} </p> : value}</Count>
       <CounterWrapper>
         <Button onClick={() => dispatch(increment1())}>ADD 1</Button>
