@@ -19,11 +19,11 @@ import Header from './Layout/components/Header'
 import HtmlToReact from './HWs/HW2/HtmlToReact'
 import LandingPage from './Layout/LandingPage'
 import NotFound from './Layout/NotFound'
+import ScrollToTop from './Layout/components/ScrollToTop'
 import SinglePost from './HWs/HW6/Blog/SinglePost'
 import StarterPage from './Layout/StarterPage'
 import Todo from './HWs/HW4/Todo/TodoApp'
 import styled from 'styled-components'
-
 const store = createStore(allReducers)
 
 const AppRoute = ({ component: Component, layout: Layout, ...rest }) => (
@@ -53,6 +53,7 @@ function App() {
   return (
     <>
       <Router>
+        <ScrollToTop />
         <CardsProvider>
           <BlogProvider>
             <ContextProvider>
@@ -69,7 +70,7 @@ function App() {
                   <AppRoute exact layout={Section} path='/new-article' component={BlogForm} />
                   <AppRoute exact layout={Section} path='/pexeso' component={CardStack} />
                   <AppRoute exact layout={Section} path='/chuck' component={Chuck} />
-                  <AppRoute exact layout={Section} path='/landing' component={StarterPage} />
+                  <AppRoute exact layout={Section} path='/home' component={StarterPage} />
                   <AppRoute
                     layout={Section}
                     path='/article/:articleSlug'
@@ -122,6 +123,9 @@ const GlobalStyles = createGlobalStyle`
 *{
   font-family: 'Roboto', sans-serif;
 
+}
+h1,h2,h3,h4{
+  font-family: 'Oswald', sans-serif;
 }
 
 }

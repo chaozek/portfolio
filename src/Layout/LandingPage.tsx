@@ -22,7 +22,7 @@ const LandingPage = () => {
       </Hero>
 
       <TextSection>
-        <Link to='/landing'>
+        <Link to='/home'>
           <Button>View Projects</Button>
         </Link>
       </TextSection>

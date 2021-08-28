@@ -12,7 +12,7 @@ import {
   NavbarToggler,
   UncontrolledDropdown,
 } from 'reactstrap'
-import { Link } from 'react-router-dom'
+import { Link, NavLink as RRNavLink } from 'react-router-dom'
 import React, { useState } from 'react'
 import monkey from '../../Imgs/Monkey.png'
 import styled from 'styled-components'
@@ -34,49 +34,50 @@ const Header = props => {
         <Collapse isOpen={isOpen} navbar>
           <Nav className='ms-auto ' navbar>
             <NavItem>
-              <Link to='/third'>
-                <NavLink>Counter</NavLink>
-              </Link>
+              <NavLink to='/third' tag={RRNavLink} activeClassName='active'>
+                Counter
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/second'>
-                <NavLink>JS History</NavLink>
-              </Link>
+              <NavLink to='/second' tag={RRNavLink} activeClassName='active'>
+                JS History
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/hackertyper'>
-                <NavLink>Hacker Typer</NavLink>
-              </Link>
+              <NavLink to='/hackertyper' tag={RRNavLink} activeClassName='active'>
+                Hacker Typer
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/tic-tac-toe'>
-                <NavLink>Tic Tac Toe</NavLink>
-              </Link>
+              <NavLink to='/tic-tac-toe' tag={RRNavLink} activeClassName='active'>
+                Tic Tac Toe
+              </NavLink>
+            </NavItem>
+
+            <NavItem>
+              <NavLink to='/pexeso' tag={RRNavLink} activeClassName='active'>
+                Pexeso
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/pexeso'>
-                <NavLink>Pexeso</NavLink>
-              </Link>
+              <NavLink to='/chuck' tag={RRNavLink} activeClassName='active'>
+                Chuck Jokes
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/chuck'>
-                <NavLink>Chuck Jokes</NavLink>
-              </Link>
+              <NavLink to='/redux' tag={RRNavLink} activeClassName='active'>
+                Redux
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/redux'>
-                <NavLink>Redux</NavLink>
-              </Link>
+              <NavLink to='/todo' tag={RRNavLink} activeClassName='active'>
+                To Do
+              </NavLink>
             </NavItem>
             <NavItem>
-              <Link to='/todo'>
-                <NavLink>To Do</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to='/blog'>
-                <NavLink>Blog</NavLink>
-              </Link>
+              <NavLink to='/blog' tag={RRNavLink} activeClassName='active'>
+                Blog
+              </NavLink>
             </NavItem>
           </Nav>
         </Collapse>

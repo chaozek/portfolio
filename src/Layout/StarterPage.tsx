@@ -73,15 +73,15 @@ const Container = styled.div<GridStyle>`
 const P = styled.p<FontStyle>`
   position: absolute;
   color: ${props => (props.color ? props.color : '#212529')};
-  font-family: 'Rampart One', cursive;
-  font-size: 1.5rem;
+  font-weight: 100;
+  text-transform: uppercase;
+
   bottom: 0;
 `
 const H2 = styled.p`
-  text-decoration: underline;
-  text-decoration-color: #148298;
   margin-top: 4rem;
   font-size: 2rem;
+  font-weight: lighter;
 `
 
 const TextBlock = styled.div`
@@ -92,11 +92,14 @@ const TextBlock = styled.div`
     width: 80%;
   }
   h1 {
-    font-weight: bold;
+    margin-top: 2rem;
+    font-size: 4rem;
+    font-weight: lighter;
+    letter-spacing: 0.7rem;
   }
   h2 {
     font-style: italic;
-    font-weight: light;
+    font-weight: lighter;
   }
 `
 type Props = {
@@ -118,6 +121,6 @@ const App = styled.div<Props>`
   :hover {
     color: #aaccf2;
     transform: scale(0.9);
-    box-shadow: frgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   }
 `
