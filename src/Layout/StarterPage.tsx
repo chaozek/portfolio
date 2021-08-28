@@ -96,6 +96,7 @@ const TextBlock = styled.div`
     font-size: 4rem;
     font-weight: lighter;
     letter-spacing: 0.7rem;
+    color: #f43250;
   }
   h2 {
     font-style: italic;

@@ -23,61 +23,63 @@ const Header = props => {
 
   return (
     <div>
-      <Navbar color='dark' dark expand='lg' className='p-3'>
+      <Navbar
+        light
+        expand='lg'
+        className='p-3'
+        style={{ backgroundColor: '#1E5A82', color: 'white', fontSize: '.9rem' }}
+      >
         <Link to='/'>
-          <NavbarBrand>
-            <Img src={monkey} alt='monkey' />
-          </NavbarBrand>
+          <NavbarLogo>[ PK ]</NavbarLogo>
         </Link>
-
         <NavbarToggler onClick={toggle} />
         <Collapse isOpen={isOpen} navbar>
           <Nav className='ms-auto ' navbar>
             <NavItem>
-              <NavLink to='/third' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/third' tag={RRNavLink} activeClassName='active'>
                 Counter
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/second' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/second' tag={RRNavLink} activeClassName='active'>
                 JS History
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/hackertyper' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/hackertyper' tag={RRNavLink} activeClassName='active'>
                 Hacker Typer
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/tic-tac-toe' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/tic-tac-toe' tag={RRNavLink} activeClassName='active'>
                 Tic Tac Toe
-              </NavLink>
+              </LinkElem>
             </NavItem>
 
             <NavItem>
-              <NavLink to='/pexeso' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/pexeso' tag={RRNavLink} activeClassName='active'>
                 Pexeso
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/chuck' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/chuck' tag={RRNavLink} activeClassName='active'>
                 Chuck Jokes
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/redux' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/redux' tag={RRNavLink} activeClassName='active'>
                 Redux
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/todo' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/todo' tag={RRNavLink} activeClassName='active'>
                 To Do
-              </NavLink>
+              </LinkElem>
             </NavItem>
             <NavItem>
-              <NavLink to='/blog' tag={RRNavLink} activeClassName='active'>
+              <LinkElem to='/blog' tag={RRNavLink} activeClassName='active'>
                 Blog
-              </NavLink>
+              </LinkElem>
             </NavItem>
           </Nav>
         </Collapse>
@@ -89,4 +91,21 @@ const Header = props => {
 export default Header
 const Img = styled.img`
   margin-left: 0.5rem;
+`
+const P = styled.p`
+  color: #5e97bd;
+  padding: 0;
+  margin: 0;
+  text-transform: uppercase;
+`
+const LinkElem = styled(NavLink)`
+  font-size: 1rem;
+  color: white !important;
+  &.active {
+    color: #f43250 !important;
+  }
+`
+const NavbarLogo = styled(NavbarBrand)`
+  color: #f43250 !important;
+  font-weight: bold;
 `

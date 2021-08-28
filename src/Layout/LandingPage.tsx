@@ -46,7 +46,7 @@ const TextSection = styled.div`
 `
 const Button = styled.button`
   font-weight: 100;
-  background-color: #7e2430;
+  background-color: #f43250;
   color: white;
   border: none;
   border-radius: 2px;
