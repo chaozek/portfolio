@@ -125,8 +125,7 @@ const GlobalStyles = createGlobalStyle`
 
 }
 h1,h2,h3,h4{
-  font-family: 'Oswald', sans-serif;
-}
+  font-family: 'Montserrat', sans-serif;}
 
 }
   body {

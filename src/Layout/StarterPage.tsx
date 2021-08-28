@@ -10,8 +10,9 @@ const HomePage = () => {
         <h1>Pavel Kaplan</h1>
         <p>
           As a Marketing Manager I had a lot of work with updating information on websites and
-          delegation wasn&apos;t efficient so I&apos;ve decided to learn how to do it. Since then
-          Iam diving deeper and deeper into website development and
+          delegation wasn&apos;t efficient so I&apos;ve decided to learn it myself.
+          <strong> Since April 2020</strong> Iam diving deeper and deeper into website development
+          and
           <strong> I&apos;ve found my passion.</strong>
         </p>
       </TextBlock>
@@ -94,7 +95,7 @@ const TextBlock = styled.div`
   h1 {
     margin-top: 2rem;
     font-size: 4rem;
-    font-weight: lighter;
+    font-weight: Black;
     letter-spacing: 0.7rem;
     color: #f43250;
   }
