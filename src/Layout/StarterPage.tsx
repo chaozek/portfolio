@@ -14,8 +14,6 @@ const HomePage = () => {
           Iam diving deeper and deeper into website development and
           <strong> I&apos;ve found my passion.</strong>
         </p>
-        <img src={monkey} alt='monkey' />
-        <h2> „better late than never“</h2>
       </TextBlock>
       <H2>ITA projects</H2>
 
@@ -85,6 +83,7 @@ const H2 = styled.p`
   margin-top: 4rem;
   font-size: 2rem;
 `
+
 const TextBlock = styled.div`
   width: 50%;
   text-align: center;

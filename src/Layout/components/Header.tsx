@@ -14,7 +14,7 @@ import {
 } from 'reactstrap'
 import { Link } from 'react-router-dom'
 import React, { useState } from 'react'
-import monkey from '../../../Imgs/Monkey.png'
+import monkey from '../../Imgs/Monkey.png'
 import styled from 'styled-components'
 const Header = props => {
   const [isOpen, setIsOpen] = useState(false)
