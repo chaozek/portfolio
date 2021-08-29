@@ -49,6 +49,29 @@ const HomeRoute = ({ component: Component, layout: Layout, ...rest }) => (
     )}
   />
 )
+const HackerRoute = ({ component: Component, layout: Layout, ...rest }) => (
+  <Route
+    {...rest}
+    render={props => (
+      <Layout>
+        <Header color='black' />
+
+        <Component {...props} />
+      </Layout>
+    )}
+  />
+)
+const BlogRoute = ({ component: Component, layout: Layout, ...rest }) => (
+  <Route
+    {...rest}
+    render={props => (
+      <Layout>
+        <Header />
+        <Component {...props} />
+      </Layout>
+    )}
+  />
+)
 function App() {
   return (
     <>
@@ -62,17 +85,22 @@ function App() {
                   <HomeRoute exact layout={HomeLayout} path='/' component={LandingPage} />
                   <AppRoute exact layout={Section} path='/third' component={Counter} />
                   <AppRoute exact layout={Section} path='/second' component={HtmlToReact} />
-                  <AppRoute exact layout={Section} path='/hackertyper' component={HackerTyper} />
+                  <HackerRoute
+                    exact
+                    layout={HackerLayout}
+                    path='/hackertyper'
+                    component={HackerTyper}
+                  />
                   <AppRoute exact layout={Section} path='/todo' component={Todo} />
                   <AppRoute exact layout={Section} path='/redux' component={Redux} />
                   <AppRoute exact layout={Section} path='/tic-tac-toe' component={GameContainer} />
-                  <AppRoute exact layout={Section} path='/blog' component={Blog} />
-                  <AppRoute exact layout={Section} path='/new-article' component={BlogForm} />
+                  <BlogRoute exact layout={BlogLayout} path='/blog' component={Blog} />
+                  <BlogRoute exact layout={BlogLayout} path='/new-article' component={BlogForm} />
                   <AppRoute exact layout={Section} path='/pexeso' component={CardStack} />
                   <AppRoute exact layout={Section} path='/chuck' component={Chuck} />
                   <AppRoute exact layout={Section} path='/home' component={StarterPage} />
-                  <AppRoute
-                    layout={Section}
+                  <BlogRoute
+                    layout={BlogLayout}
                     path='/article/:articleSlug'
                     component={props => <SinglePost {...props} />}
                   />
@@ -110,6 +138,13 @@ export const Section = styled.div`
   }
 `
 export const HomeLayout = styled.div`
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  background: white;
+`
+export const HackerLayout = styled.div``
+export const BlogLayout = styled.div`
   margin: 0;
   padding: 0;
   box-sizing: 0;

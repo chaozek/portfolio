@@ -11,34 +11,39 @@ function NavBar() {
   }
   return (
     <div>
-      <Navbar color='dark' dark expand='md' className='mb-5 p-3'>
-        <NavbarBrand>
+      <BlogNavbar light expand='sm'>
+        <BlogLogo>
           <Link to='/blog'>
-            <P>Blog</P>
+            <P>All posts</P>
           </Link>
-        </NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className='mr-auto' navbar>
-            <NavItem>
-              <Link to='/blog'>
-                <NavLink>All articles</NavLink>
-              </Link>
-            </NavItem>
-            <NavItem>
-              <Link to='/new-article'>
-                <NavLink>Create Article</NavLink>
-              </Link>
-            </NavItem>
-          </Nav>
-        </Collapse>
-      </Navbar>
+        </BlogLogo>
+        <Nav className='mr-auto' navbar>
+          <NavItem>
+            <Link to='/new-article'>
+              <NavLink>Create Article</NavLink>
+            </Link>
+          </NavItem>
+        </Nav>
+      </BlogNavbar>
     </div>
   )
 }
 
 export default NavBar
 const P = styled.p`
-  color: #aaccff;
   margin: 0;
+  color: white;
+  font-weight: lighter;
+  padding: 0px 25px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+`
+const BlogNavbar = styled(Navbar)`
+  margin: 0;
+  padding: 0rem 1rem;
+`
+const BlogLogo = styled(NavbarBrand)`
+  margin: 0;
+  background-color: #1e5a82;
+  color: white !important;
 `

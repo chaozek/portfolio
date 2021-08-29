@@ -20,14 +20,17 @@ const Header = props => {
   const [isOpen, setIsOpen] = useState(false)
 
   const toggle = () => setIsOpen(!isOpen)
-
   return (
     <div>
       <Navbar
-        light
         expand='lg'
+        dark
         className='p-3'
-        style={{ backgroundColor: '#1E5A82', color: 'white', fontSize: '.9rem' }}
+        style={{
+          backgroundColor: props.color ? props.color : '#1E5A82',
+          color: 'white',
+          fontSize: '.9rem',
+        }}
       >
         <Link to='/'>
           <NavbarLogo>[ PK ]</NavbarLogo>

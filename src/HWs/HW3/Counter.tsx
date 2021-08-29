@@ -22,7 +22,7 @@ export default class Counter extends Component<{}, { count: number }> {
   render() {
     return (
       <div>
-        <H1>PrevState Counter App</H1>
+        <H1>Counter App</H1>
         <Count>{this.state.count}</Count>
         <CounterWrapper>
           <Button onClick={this.decrement}>Decrement</Button>

@@ -29,5 +29,6 @@ const Button = styled.button<ButtonProps>`
   padding: 0;
   text-align: center;
   width: 34px;
-  color: ${props => (props.player === 'x' ? `${theme.green}` : `${theme.blue}`)};
+  color: ${({ player }) =>
+    (player === 'x' && `${theme.green}`) || (player === 'o' && `${theme.blue}`) || 'black'};
 `

@@ -16,7 +16,6 @@ type BlogContextState = {
   newArticle: { id: number; text: string; header: string; date: string; UrlSlug: string }
   articles: { id: number; text: string | string[]; header: string; date: string; UrlSlug: string }[]
 }
-//this is just for future reference or update - transfer slug to browser readable format
 function slugify(string) {
   return string
     .toString()
@@ -25,8 +24,6 @@ function slugify(string) {
     .replace(/\s+/g, '-')
     .replace(/[^\w\-]+/g, '')
     .replace(/\-\-+/g, '-')
-    .replace(/^-+/, '')
-    .replace(/-+$/, '')
 }
 const contextDefaultValues: BlogContextState = {
   starterArticles: [
@@ -38,7 +35,6 @@ const contextDefaultValues: BlogContextState = {
         '<img src="https://cdn.shopify.com/s/files/1/1061/1924/products/See_No_Evil_Monkey_Emoji_grande.png?v=1571606065" width="200" height="200">',
       ].join('\n\n'),
       header: 'Article 1',
-      //no func for date - gets new date everytime, its here just for design consistency
       date: new Date().toLocaleString(),
       UrlSlug: 'article-1',
     },
@@ -98,12 +94,17 @@ const BlogProvider: FunctionComponent<BlogProps> = ({ children }) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     let value = e.target.value
     let name = e.target.name
-
     setNewArticle(p => {
       return {
         ...p,
         [name]: value,
         id: uuidv4(),
+      }
+    })
+    setNewArticle(p => {
+      return {
+        ...p,
+        UrlSlug: slugify(p.UrlSlug),
       }
     })
   }

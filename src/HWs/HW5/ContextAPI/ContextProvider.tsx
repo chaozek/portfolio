@@ -12,6 +12,7 @@ interface MyState {
     line: number[]
   }
   player: string
+  side: string
 }
 interface State {
   handleClick: (i: number) => void
@@ -21,7 +22,7 @@ type Combined = State & MyState
 export const AppContext = React.createContext<Combined>(null as any)
 
 const winLines = computeWinLines()
-
+const side = ''
 export default class ContextProvider extends React.Component<MyProps, MyState> {
   constructor(props: MyProps) {
     super(props)
@@ -36,6 +37,7 @@ export default class ContextProvider extends React.Component<MyProps, MyState> {
       xIsNext: true,
       winner: { side: null, line: [] },
       player: '',
+      side: '',
     }
   }
   handleClick = (i: number) => {
@@ -60,7 +62,7 @@ export default class ContextProvider extends React.Component<MyProps, MyState> {
 
   render() {
     return (
-      <AppContext.Provider value={{ ...this.state, handleClick: this.handleClick }}>
+      <AppContext.Provider value={{ ...this.state, handleClick: this.handleClick, side: side }}>
         {this.props.children}
       </AppContext.Provider>
     )
