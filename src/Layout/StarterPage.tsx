@@ -29,7 +29,7 @@ const HomePage = () => {
           )
         })}
       </Container>
-      <H2>A few business projects</H2>
+      <H2>A few test & business projects</H2>
 
       <Container grid={200}>
         {privateProjects.map((data, index) => {

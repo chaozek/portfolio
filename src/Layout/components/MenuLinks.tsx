@@ -4,9 +4,11 @@ import INSPIRATA from '../../Imgs/inspirata.png'
 import RSOH from '../../Imgs/rsoh.png'
 import blog from '../../Imgs/blog.jpg'
 import count from '../../Imgs/count.jpg'
+import github from '../../Imgs/github.jpg'
 import hacker from '../../Imgs/hacker.jpg'
 import history from '../../Imgs/history.jpg'
 import jokes from '../../Imgs/jokes.jpg'
+import nabor from '../../Imgs/nabor.jpg'
 import pexeso from '../../Imgs/pexeso.jpg'
 import redux from '../../Imgs/redux.jpg'
 import tictactoe from '../../Imgs/tictactoe.jpg'
@@ -80,5 +82,15 @@ export const privateProjects = [
     ProjectName: 'Inspirata (WP)',
     Link: 'https://inspirata.cz/',
     CoverPhoto: INSPIRATA,
+  },
+  {
+    ProjectName: 'GitHub Finder (React)',
+    Link: 'https://github-finder-7veiwn20m-chaozek.vercel.app/',
+    CoverPhoto: github,
+  },
+  {
+    ProjectName: 'Chceme tebe (React)',
+    Link: 'https://chcemetebe.cz/',
+    CoverPhoto: nabor,
   },
 ]
