@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { itaProjects, privateProjects } from './components/MenuLinks'
+import { currentProjects, itaProjects, privateProjects } from './components/MenuLinks'
 import monkey from '../../Imgs/Monkey.png'
 import styled from 'styled-components'
 
@@ -8,14 +8,20 @@ const HomePage = () => {
     <>
       <TextBlock>
         <h1>Pavel Kaplan</h1>
-        <p>
-          As a Marketing Manager I had a lot of work with updating information on websites and
-          delegation wasn&apos;t efficient so I&apos;ve decided to learn it myself.
-          <strong> Since April 2020</strong> Iam diving deeper and deeper into website development
-          and
-          <strong> I&apos;ve found my passion.</strong>
-        </p>
+        <p>I Just love websites development</p>
       </TextBlock>
+      <H2>Currently working on</H2>
+      <Container grid={200}>
+        {currentProjects.map((data, index) => {
+          return (
+            <a key={index} target='_blank' rel='noreferrer' href={data.Link}>
+              <App image={data.CoverPhoto}>
+                <P color='white'>{data.ProjectName}</P>
+              </App>
+            </a>
+          )
+        })}
+      </Container>
       <H2>ITA projects</H2>
 
       <Container grid={150}>

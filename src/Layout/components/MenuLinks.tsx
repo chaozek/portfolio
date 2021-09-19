@@ -2,6 +2,7 @@ import ADP from '../../Imgs/adp.png'
 import EC from '../../Imgs/ec.png'
 import INSPIRATA from '../../Imgs/inspirata.png'
 import RSOH from '../../Imgs/rsoh.png'
+import bazos from '../../Imgs/bazos.png'
 import blog from '../../Imgs/blog.jpg'
 import count from '../../Imgs/count.jpg'
 import github from '../../Imgs/github.jpg'
@@ -59,6 +60,13 @@ export const itaProjects = [
     ProjectName: 'Blog',
     Link: '/blog',
     CoverPhoto: blog,
+  },
+]
+export const currentProjects = [
+  {
+    ProjectName: 'Bazos Clone',
+    Link: 'https://github-flame.vercel.app/',
+    CoverPhoto: bazos,
   },
 ]
 export const privateProjects = [
