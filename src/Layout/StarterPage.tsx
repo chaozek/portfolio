@@ -6,12 +6,8 @@ import styled from 'styled-components'
 const HomePage = () => {
   return (
     <>
-      <TextBlock>
-        <h1>Pavel Kaplan</h1>
-        <p>I Just love websites development</p>
-      </TextBlock>
       <H2>Currently working on</H2>
-      <Container grid={200}>
+      <Container grid={100}>
         {currentProjects.map((data, index) => {
           return (
             <a key={index} target='_blank' rel='noreferrer' href={data.Link}>
@@ -36,7 +32,6 @@ const HomePage = () => {
         })}
       </Container>
       <H2>A few test & business projects</H2>
-
       <Container grid={200}>
         {privateProjects.map((data, index) => {
           return (

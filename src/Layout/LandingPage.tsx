@@ -11,40 +11,40 @@ const LandingPage = () => {
     <>
       <Hero>
         <Clouds>
-          <H1>WELCOME </H1>
-          <P>Pavel Kaplan </P>
           <Cloud cloud={1} src={cloud1} alt='cloud1' />
           <Cloud cloud={2} src={cloud2} alt='cloud2' />
           <Cloud cloud={3} src={cloud3} alt='cloud3' />
           <Cloud cloud={4} src={cloud4} alt='cloud4' />
           <Cloud cloud={5} src={cloud5} alt='cloud5' />
         </Clouds>
+        <TextSection>
+          <H1>WELCOME </H1>
+          <Button to='/home'>View Projects</Button>
+        </TextSection>
       </Hero>
-
-      <TextSection>
-        <Link to='/home'>
-          <Button>View Projects</Button>
-        </Link>
-      </TextSection>
     </>
   )
 }
 
 export default LandingPage
+
 const Hero = styled.div`
-  position: relative;
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url(${bg});
   background-size: cover;
   background-position: bottom;
 `
 const TextSection = styled.div`
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  position: relative;
-  padding: 75px 100px;
+  z-index: 5;
 `
-const Button = styled.button`
+const Button = styled(Link)`
   font-weight: 100;
   background-color: #f43250;
   color: white;
@@ -52,19 +52,17 @@ const Button = styled.button`
   border-radius: 2px;
   font-size: 1.6rem;
   padding: 0.5rem 1.5rem;
+  z-index: 5;
+
   @media (max-width: 768px) {
     font-size: 1rem;
   }
 `
 const H1 = styled.h1`
-  position: absolute;
   font-size: 3rem;
   letter-spacing: 2rem;
   font-weight: lighter;
-  top: 60%;
   text-align: center;
-  left: 51%;
-  transform: translate(-50%, -50%);
   color: white;
   @media (max-width: 768px) {
     font-size: 3rem;
@@ -72,13 +70,11 @@ const H1 = styled.h1`
   }
 `
 const P = styled.p`
-  position: absolute;
   font-size: 3rem;
   text-align: center;
   font-weight: lighter;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
   color: #3e3e3e;
   text-shadow: 1px 1px #ffffff;
   @media (max-width: 768px) {
