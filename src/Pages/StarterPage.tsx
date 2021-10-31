@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { currentProjects, itaProjects, privateProjects } from './components/MenuLinks'
+import { currentProjects, itaProjects, privateProjects } from '../components/MenuLinks'
 import monkey from '../../Imgs/Monkey.png'
 import styled from 'styled-components'
 
